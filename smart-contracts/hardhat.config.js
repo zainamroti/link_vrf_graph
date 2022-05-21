@@ -31,6 +31,8 @@ const MUMBAI_PRIVATE_KEY = process.env.MUMBAI_PRIVATE_KEY;
 //then -> npx hardhat verify YOUR_CONTRACT_ADDRESS --network rinkeby 
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY;
 
+const POLYGONSCAN_KEY = process.env.POLYGONSCAN_KEY;
+
 module.exports = {
   solidity: "0.8.4",
   networks: {
@@ -50,6 +52,9 @@ module.exports = {
   etherscan: {
     // Your API key for Etherscan
     // Obtain one at https://etherscan.io/
-    apiKey: ETHERSCAN_API_KEY,
+    // apiKey: ETHERSCAN_API_KEY,
+    apiKey: {
+      polygonMumbai: POLYGONSCAN_KEY,
+    },
   }
 };
